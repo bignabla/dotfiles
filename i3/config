@@ -261,14 +261,14 @@ bar {
 	#tray_output none
 	#tray_output primary
 	#colors {
-	#	backgroud $black2
-	#	statusline $white2
-	#	separator $white2
-	#	focused_workspace $background $background $red1
-	#	active_workspace $black2 $black1 $white2
-	#	inactive_workspace $black1 $black2 $foreground
-	#	urgent_workspace $red1 $red1 $white2
-	#	binding_mode $background $red2 $white2
+		#backgroud $black2
+		#statusline $white2
+		#separator $white2
+		#focused_workspace $background $background $red1
+		#active_workspace $black2 $black1 $white2
+		#inactive_workspace $black1 $black2 $foreground
+		#urgent_workspace $red1 $red1 $white2
+		#binding_mode $background $red2 $white2
 	#}
 }
 
