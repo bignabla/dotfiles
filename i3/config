@@ -41,7 +41,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvtc
 
 # kill focused window
-bindsym $mod+Shift+a kill
+bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -260,10 +260,13 @@ client.placeholder 	#000000 #0c0c0c $white2 #000000 0c0c0c
 
 for_window [class="URxvt*"] border pixel 1
 
-# Terminal scratchpad
+# Terminal scratchpad with tmux and three windows: 1. Terminal | 2.Neovim temp file
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad
+exec urxvtc -name urxvt_scratchpad \
+-e tmux -2 new-session -d -s scratchpad \; \
+new-window -n nvim 'nvim +e /tmp/nvim-tmp.md' \; \
+attach-session -d -t scratchpad
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
