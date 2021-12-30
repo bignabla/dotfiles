@@ -170,7 +170,7 @@ mode "$mode_system" {
 
 bindsym $mod+BackSpace mode "$mode_system"
 
-exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/feh/wallpaper.jpg
+exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/i3/feh/geology.png
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
