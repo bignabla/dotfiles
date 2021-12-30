@@ -1,4 +1,8 @@
-#xrdb -merge /home/bignabla/.config/X11/.Xresources
+xrdb -merge $HOME/.config/X11/.Xresources
 urxvtd -o -q -f
-xrdb -merge /home/bignabla/.config/X11/.Xresources
+
+setxkbmap -option 'caps:ctrl_modifier'; xcape -e 'Caps_Lock:Escape'&
+# stxkbmap -option caps:escape
+udiskie &
+
 exec i3
